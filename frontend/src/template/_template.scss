@@ -1,0 +1,21 @@
+@import 'neat';
+
+.navbar {
+    @include grid-column(12);
+
+    ul { padding: 0; }
+
+    ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px;
+
+        &:hover { font-weight: bold; }
+    }
+
+    ul li a { text-decoration: none; }
+}
+
+.page-header {
+    small { font-size: 12px; }
+}
