@@ -9,12 +9,13 @@ import About from '../about/about';
 
 export default props => (
   <div className='container'>
-		<h1>Carregou</h1>
-		<Menu />
+		<Menu></Menu>
+		<h1>Untitled Lounge</h1>
+		{/* <Menu />
 		<Switch>
 			<Route path='/todos' exact component={Todo} />
 			<Route path='/about' component={About} />
 			<Redirect to='/todos' />
-		</Switch>
+		</Switch> */}
   </div>
 );

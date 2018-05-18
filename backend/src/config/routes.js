@@ -5,7 +5,7 @@ module.exports = function(server) {
     const router = express.Router();
     server.use('/api', router);
 
-    //TODO Routes
-    const todoService = require('../api/todo/todoService');
-    todoService.register(router, '/todos');
+    //APOSTA Routes
+    const apostaService = require('../api/aposta/apostaService');
+    apostaService.register(router, '/apostas');
 };

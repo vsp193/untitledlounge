@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const neatPaths = require("bourbon-neat").includePaths;
 
 module.exports = {
   entry: './src/index.jsx',
@@ -36,11 +35,20 @@ module.exports = {
 			use: [
 				{ loader: 'style-loader' },
 				{ loader: 'css-loader' },
-				{ loader: 'sass-loader', options: { includePaths: neatPaths } }
+				{ loader: 'sass-loader' }
 			]
     }, {
-      test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
-       use: 'file'
+      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+            publicPath: 'assets/',
+            outputPath: 'images/'
+          }
+        }
+      ]
     }]
   }
 }

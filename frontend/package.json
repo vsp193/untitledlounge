@@ -38,7 +38,5 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0"
   },
-  "dependencies": {
-    "bourbon-neat": "^2.1.0"
-  }
+  "dependencies": {}
 }
