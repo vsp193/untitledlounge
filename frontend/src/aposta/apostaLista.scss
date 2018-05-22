@@ -1,0 +1,30 @@
+@import '../template/colors.scss';
+
+.aposta-lista {
+  .aposta {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+
+    img { width: 25px; }
+
+    p { margin-left: 10px; }
+
+    span {
+      color: $title-color;
+      flex-basis: 100%;
+      font-size: 15px;
+      margin-left: 35px;
+    }
+  }
+
+  .carregar-mais-apostas {
+    color: $title-color;
+    cursor: pointer;
+    font-family: ITC Avant Gard;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 28px 0;
+  }
+}

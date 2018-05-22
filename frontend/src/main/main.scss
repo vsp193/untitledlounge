@@ -1,1 +1,27 @@
-* { font-family: Arial, Helvetica, sans-serif; }
+@import '../template/colors.scss';
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: ITC Avant Gard;
+  src: url(/fonts/ITCAVANTGARDEPRO-MD_0.OTF);
+}
+
+ul { list-style-type: none; }
+
+h2 {
+  color: $title-color;
+  font-family: ITC Avant Gard;
+  font-weight: 100;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+p {
+  color: $text-color;
+  font-size: 21px;
+}

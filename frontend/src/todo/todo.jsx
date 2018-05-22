@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import PageHeader from '../template/pageHeader';
 import TodoForm from './todoForm';
 import TodoList from './todoList';
 
@@ -20,8 +19,6 @@ class Todo extends Component {
   render() {
     return (
       <div>
-        <PageHeader name='Tarefas' small='Cadastro'></PageHeader>
-
         <TodoForm
           handleChange={this.props.changeDescription}
           handleSearch={this.props.search}

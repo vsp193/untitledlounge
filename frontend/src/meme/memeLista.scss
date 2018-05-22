@@ -1,0 +1,53 @@
+@import '../template/colors.scss';
+
+.meme-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .meme {
+    margin-right: 28px;
+    margin-bottom: 22px;
+    flex-basis: 25%;
+
+    img.thumb {
+      display: block;
+      border: 2px solid $border-color;
+      height: 212px;
+      width: 330px;
+    }
+
+    .info {
+      margin: 15px 0;
+
+      img.userpic {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+      }
+
+      p {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+
+    span {
+      color: $title-color;
+      flex-basis: 100%;
+      font-size: 15px;
+      margin-left: 35px;
+    }
+  }
+
+  .carregar-mais-memes {
+    color: $title-color;
+    cursor: pointer;
+    flex-basis: 100%;
+    font-family: ITC Avant Gard;
+    font-size: 18px;
+    margin: 28px 0;
+    text-transform: uppercase;
+  }
+}
