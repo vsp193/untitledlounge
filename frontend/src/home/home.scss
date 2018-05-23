@@ -1,7 +1,13 @@
 @import '../template/colors.scss';
 
 .home {
-  margin: 25px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px auto;
 
-  .meme-lista { width: 50%; }
+  .ultimas-apostas, .ultimos-memes, .ultimas-frases {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
 }

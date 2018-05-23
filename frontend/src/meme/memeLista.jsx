@@ -8,7 +8,7 @@ export default props => {
 
     return memes.map(meme => (
       <article className='meme' key={meme._id}>
-        <img className='thumb' alt='meme' src=''/>
+        <img className='thumb' alt='meme' src={meme.imagemUrl}/>
         <div className='info'>
           <img className='userpic' alt='userpic' src='/images/default_user_pic.png'/>
           <p>{meme.titulo}</p>

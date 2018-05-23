@@ -1,0 +1,31 @@
+@import '../template/colors.scss';
+
+.frase-lista {
+  .frase {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+
+    img { width: 25px; }
+
+    p { margin-left: 10px; }
+
+    span {
+      color: $title-color;
+      flex-basis: 100%;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 35px;
+    }
+  }
+
+  .carregar-mais-frases {
+    color: $title-color;
+    cursor: pointer;
+    font-family: ITC Avant Gard;
+    font-size: 18px;
+    margin: 28px 0;
+    text-transform: uppercase;
+  }
+}

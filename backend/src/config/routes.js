@@ -8,4 +8,15 @@ module.exports = function(server) {
     //APOSTA Routes
     const apostaService = require('../api/aposta/apostaService');
     apostaService.register(router, '/apostas');
+
+    //MEME Routes
+    const memeService = require('../api/meme/memeService');
+    memeService.register(router, '/memes');
+
+    //FRASE Routes
+    const fraseService = require('../api/frase/fraseService');
+    fraseService.register(router, '/frases');
+
+    //HOME Routes
+    const homeService = require('../api/custom/homeService')(router);
 };
