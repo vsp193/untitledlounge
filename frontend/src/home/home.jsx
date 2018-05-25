@@ -1,37 +1,38 @@
 import './home.scss';
 
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { getData } from './homeActions';
 
 import ApostaLista from '../aposta/apostaLista';
+import ApostaDetalhe from '../aposta/apostaDetalhe';
 import MemeLista from '../meme/memeLista';
 import FraseLista from '../frase/fraseLista';
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    // this.state = { apostas: [
-    //   { _id: '123', titulo: 'Aposta teste 1' },
-    //   { _id: '456', titulo: 'Aposta teste 2' },
-    //   { _id: '789', titulo: 'Aposta teste 3' },
-    //   { _id: '012', titulo: 'Aposta teste 4' },
-    //   { _id: '345', titulo: 'Aposta teste 5' }
-    // ], memes: [
-    //   { _id: '123', titulo: 'Meme teste 1' },
-    //   { _id: '456', titulo: 'Meme teste 2' }
-    // ], frases: [
-    //   { _id: '123', titulo: 'Frase teste 1.' },
-    //   { _id: '456', titulo: 'Frase teste 2.' },
-    //   { _id: '789', titulo: 'Frase teste 3.' },
-    //   { _id: '012', titulo: 'Frase teste 4.' }
-    // ]};
+  }
+
+  componentDidMount() {
+    this.props.getData();
   }
 
   componentWillMount() {
-    this.props.getData();
+    this.setState({
+      isApostaModalOpen: false,
+      apostaDetalhe: {}
+    });
+  }
+
+  openApostaModal(aposta) {
+    this.setState({
+      isApostaModalOpen: true,
+      apostaDetalhe: aposta}
+    );
   }
 
   render() {
@@ -39,7 +40,12 @@ class Home extends Component {
       <section className='home'>
         <div className='ultimas-apostas'>
           <h2>Últimas Apostas</h2>
-          <ApostaLista apostas={this.props.apostas} />
+          <ApostaLista
+            apostas={this.props.apostas}
+            handleApostaClick={this.openApostaModal.bind(this)} />
+          <ApostaDetalhe
+            isOpen={this.state.isApostaModalOpen}
+            aposta={this.state.apostaDetalhe} />
         </div>
         <div className='ultimos-memes'>
           <h2>Últimos Memes</h2>

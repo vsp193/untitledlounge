@@ -17,6 +17,6 @@ module.exports = function(server) {
     const fraseService = require('../api/frase/fraseService');
     fraseService.register(router, '/frases');
 
-    //HOME Routes
-    const homeService = require('../api/custom/homeService')(router);
+    //CUSTOM Routes
+    require('../api/custom/homeRoute')(router);
 };

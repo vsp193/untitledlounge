@@ -7,7 +7,8 @@ export default props => {
     const apostas = props.apostas || [];
 
     return apostas.map(aposta => (
-      <article className='aposta' key={aposta._id}>
+      <article className='aposta' key={aposta._id}
+        onClick={() => props.handleApostaClick(aposta)}>
         <img src='/images/default_user_pic.png'/>
         <p>{aposta.titulo}</p>
         <span>0 pessoas apostaram</span>
